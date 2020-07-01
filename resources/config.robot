@@ -1,5 +1,7 @@
 ***Settings***
-Library    AppiumLibrary
+Documentation    Classe responsavel pela configuração dos hooks e da comunicação com o Appium e Android
+Library          AppiumLibrary
+Resource         helpers.robot
 
 ***Variables***
 ${btn_comecar}    COMEÇAR
@@ -18,11 +20,3 @@ Close Session
     Capture Page Screenshot
     Close Application
 
-Go To Home Screen
-    Wait Until Page Contains    ${btn_comecar}
-    Click Text                  ${btn_comecar}
-
-Open Menu
-    Wait Until Element is Visible    accessibility_id=Open navigation drawer
-    Click Element                    accessibility_id=Open navigation drawer    
-    Wait Until Element is Visible    id=io.qaninja.android.twp:id/navView
